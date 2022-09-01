@@ -39,17 +39,17 @@ const Home = ({data}) => {
   return (
     
     <div className="home-container">
-{/*       {data.map((element, index) => {
+     {/*  {data.map((element, index) => {
         console.log(data);
         console.log(element.title);
         console.log(index);
-      })}
+      })} */}
       <Card />
       <Card />
       <Card />
       <Card />
       <Card />
-      <Card /> */}
+      <Card />
     </div>
   );
 };

@@ -6,13 +6,13 @@ const HeaderBar = () => {
     <>
       <header className="header-container">
         <h1>WeMovies</h1>
-        <div className="cart-container">
-          <div className="textCart-container">
-            <p>Meu Carrinho</p>
-            <p>0 itens</p>
-          </div>
-          <div>
-            <Link to="/carrinho">
+        <Link to="/carrinho">
+          <div className="cart-container">
+            <div className="textCart-container">
+              <p>Meu Carrinho</p>
+              <p>0 itens</p>
+            </div>
+            <div>
               <svg
                 width="31"
                 height="26"
@@ -25,9 +25,9 @@ const HeaderBar = () => {
                   fill="white"
                 />
               </svg>
-            </Link>
+            </div>
           </div>
-        </div>
+        </Link>
       </header>
     </>
   );
