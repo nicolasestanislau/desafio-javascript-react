@@ -1,17 +1,30 @@
 import React from "react";
 import "./style.scss";
-const Card = ({ image, title, price, cart }) => {
-  image = "https://www.imagemhost.com.br/images/2022/07/10/viuva-negra.png";
-  title = "Viúva Negra";
-  price = 9.99;
-  cart= 1;
+import { useCart } from "../CartContext";
+/* const cart = useContext(CartContext);
+const add = () => {
+  cart.addToCart({
+    id: id,
+  });
+}; */
+const Card = ({ id, image, title, price }) => {
+  const cartList = useCart();
+  const itemsCount = Object.keys(cartList.cart).length;
+  const add = (product) => () => {
+    cartList.addToCart(product);
+  };
+
   return (
     <>
-      <div className="card-container">
-        <img className="image-container" src={image} />
+      {/* <pre>{JSON.stringify(cartList.cart, null, 2)}</pre> */}
+      <div className="card-container" id={id}>
+        <img className="image-container" src={image} alt={title} />
         <h1>{title}</h1>
         <p className="card-price">{price}</p>
-        <button className="button-container">
+        <button
+          onClick={add({ image, title, price, id })}
+          className="button-container"
+        >
           <svg
             width="12"
             height="13"
@@ -24,7 +37,7 @@ const Card = ({ image, title, price, cart }) => {
               fill="white"
             />
           </svg>
-          <p>{cart}</p>
+          <p>{itemsCount}</p>
           <p>ADICIONAR AO CARRINHO</p>
         </button>
       </div>

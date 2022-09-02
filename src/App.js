@@ -1,14 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Home from './components/home';
-import Car from './components/Car';
-
+import Home from "./components/home";
+import Cart from "./components/Cart";
+import Completed from "./components/Completed ";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/carrinho" element={<Car/>} />
+      <Route path="/" element={<Home />} />
+      <Route path="/carrinho" element={<Cart />} />
+      <Route path="/completed" element={<Completed />} />
     </Routes>
   );
 }

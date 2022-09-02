@@ -4,13 +4,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 255px;
+    padding: 0 355px;
     padding-bottom: 52px;
     h1 {
         color: #fff;
         font-weight: 700;
         font-size: 20px;
         line-height: 27px;
+    }
+    a {
+        text-decoration: none;
     }
 }
 

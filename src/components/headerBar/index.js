@@ -1,16 +1,25 @@
 import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
+import { useCart } from "../CartContext";
 const HeaderBar = () => {
+  const cart = useCart();
+  //const itemsCount = Object.keys(cart.cart).length;
+  const itemsCount = Object.keys(cart.cart).reduce((prev, curr) => {
+    return prev + cart.cart[curr].quantity;
+  }, 0);
   return (
     <>
       <header className="header-container">
-        <h1>WeMovies</h1>
+        <Link to="/">
+          <h1>WeMovies</h1>
+        </Link>
+
         <Link to="/carrinho">
           <div className="cart-container">
             <div className="textCart-container">
               <p>Meu Carrinho</p>
-              <p>0 itens</p>
+              <p>{itemsCount} itens</p>
             </div>
             <div>
               <svg

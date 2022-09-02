@@ -6,19 +6,18 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import HeaderBar from "./components/headerBar";
 import "@fontsource/open-sans";
-import './assets/css/style.scss'
-
+import "./assets/css/style.scss";
+import { CartProvider } from "./components/CartContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-    <HeaderBar />
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+  <CartProvider>
+    <React.StrictMode>
+      <BrowserRouter>
+        <HeaderBar />
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  </CartProvider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
