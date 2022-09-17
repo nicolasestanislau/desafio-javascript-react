@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
 const CartCard = ({
   imageCard,
@@ -8,8 +8,30 @@ const CartCard = ({
   subtotal,
   quantity,
   remove,
-  changeQuantity
+  changeQuantity,
 }) => {
+  const [mudavalor, setMudavalor] = useState(quantity);
+  if(mudavalor == 0) {
+    console.log('entro')
+  }
+  const subtraction = async () => {
+    if(mudavalor == 1) {
+      return
+    }
+    await setMudavalor(quantity - 1);
+
+    const el = document.getElementById("new");
+    el.focus();
+    el.blur();
+  };
+
+  const plus = async () => {
+    await setMudavalor(quantity + 1);
+
+    const el = document.getElementById("new");
+    el.focus();
+    el.blur();
+  };
 
   return (
     <>
@@ -22,6 +44,7 @@ const CartCard = ({
           </div>
           <div className="input-content">
             <svg
+              onClick={subtraction}
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -35,10 +58,13 @@ const CartCard = ({
             </svg>
             <input
               type="number"
+              id="new"
               onBlur={changeQuantity}
-              defaultValue={quantity}
+              value={mudavalor}
+              readOnly
             ></input>
             <svg
+              onClick={plus}
               width="18"
               height="18"
               viewBox="0 0 18 18"

@@ -1,12 +1,6 @@
 import React from "react";
 import "./style.scss";
 import { useCart } from "../CartContext";
-/* const cart = useContext(CartContext);
-const add = () => {
-  cart.addToCart({
-    id: id,
-  });
-}; */
 const Card = ({ id, image, title, price }) => {
   const cartList = useCart();
   const itemsCount = Object.keys(cartList.cart).length;
