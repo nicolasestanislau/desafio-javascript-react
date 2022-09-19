@@ -11,26 +11,30 @@ const CartCard = ({
   changeQuantity,
 }) => {
   const [mudavalor, setMudavalor] = useState(quantity);
-  if(mudavalor == 0) {
-    console.log('entro')
-  }
+
   const subtraction = async () => {
-    if(mudavalor == 1) {
-      return
+    if (mudavalor == 1) {
+      return;
     }
     await setMudavalor(quantity - 1);
 
-    const el = document.getElementById("new");
-    el.focus();
-    el.blur();
+    const el = document.getElementsByClassName("new");
+    Object.keys(el).forEach((item, index) => {
+      console.log(`new + ${index}`, el[index]);
+      el[index].focus();
+      el[index].blur();
+    });
   };
 
   const plus = async () => {
     await setMudavalor(quantity + 1);
 
-    const el = document.getElementById("new");
-    el.focus();
-    el.blur();
+    const el = document.getElementsByClassName("new");
+    Object.keys(el).forEach((item, index) => {
+      console.log(`new + ${index}`, el[index]);
+      el[index].focus();
+      el[index].blur();
+    });
   };
 
   return (
@@ -58,7 +62,7 @@ const CartCard = ({
             </svg>
             <input
               type="number"
-              id="new"
+              className="new"
               onBlur={changeQuantity}
               value={mudavalor}
               readOnly
