@@ -5,7 +5,9 @@ import api from "../../services/api";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
+    setTimeout(() => setLoading(false), 1000);
     api.get("products").then(({ data }) => {
       setMovies(data);
     });
@@ -15,15 +17,28 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {movies?.map((movie) => (
-        <Card
-          key={movie.id}
-          id={movie.id}
-          title={movie.title}
-          image={movie.image}
-          price={movie.price}
-        />
-      ))}
+      {loading === false ? (
+        movies?.map((movie) => (
+          <Card
+            key={movie.id}
+            id={movie.id}
+            title={movie.title}
+            image={movie.image}
+            price={movie.price}
+          />
+        ))
+      ) : (
+        <div className="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      )}
     </div>
   );
 };

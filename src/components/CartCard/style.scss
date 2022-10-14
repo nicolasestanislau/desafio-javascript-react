@@ -1,10 +1,19 @@
+@mixin respond-to-min($point) {
+  @media only screen and (min-width: $point) {
+    @content;
+  }
+}
 .cart-card {
   background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 355px;
-  padding-bottom: 23px;
+  /*  margin: 0 355px; */
+/*   padding: 0 14px; */
+  @include respond-to-min(640px) {
+    /* padding: 0 164px; */
+  }
+  /* padding-bottom: 23px; */
 }
 
 .cart-header {
@@ -20,6 +29,7 @@
   }
 }
 .cart-content-checkout {
+  margin: 23px 0;
   width: 100%;
   display: flex;
   justify-content: space-evenly;

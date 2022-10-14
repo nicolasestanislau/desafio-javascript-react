@@ -1,9 +1,17 @@
+@mixin respond-to-min($point) {
+  @media only screen and (min-width: $point) {
+    @content;
+  }
+}
 .cart-content {
+  margin: 0 14px;
+  @include respond-to-min(640px) {
+    margin: 0 164px;
+  }
   background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 355px;
   h1 {
     font-size: 20px;
     line-height: 27px;
@@ -11,8 +19,8 @@
     margin-top: 62px;
   }
   hr {
-    width: 447px;
-    margin: 0;
+    width: 99%;
+    margin: 0 14px;
   }
   button {
     color: #fff;
@@ -30,11 +38,17 @@
 }
 
 .total-content {
-  padding: 0 12px;
-  margin: 0 355px;
+  padding: 0 10px;
+  margin: 0 14px;
+  margin-bottom: 64px;
+  @include respond-to-min(640px) {
+    margin: 0 164px;
+    padding: 0 100px;
+    margin-bottom: 64px;
+  }
   flex-direction: row;
   justify-content: space-between;
-  p{
+  p {
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
@@ -46,19 +60,24 @@
     line-height: 19px;
     height: 12px;
   }
-
 }
 hr {
   background: #fff;
-  margin: 0 355px;
+  margin: 0 14px;
+  @include respond-to-min(640px) {
+    margin: 0 164px;
+  }
 }
 .cart-card {
+  margin-bottom: 23px;
   background: #fff;
   display: flex;
   flex-direction: column;
+  margin: 0 14px;
+  @include respond-to-min(640px) {
+    margin: 0 164px;
+  }
   align-items: center;
-  margin: 0 355px;
-  padding-bottom: 23px;
 }
 
 .cart-header {
@@ -71,5 +90,14 @@ hr {
     line-height: 19px;
     color: #999;
     margin-top: 22px;
+  }
+}
+
+.article-container {
+  article:last-child {
+    padding-bottom: 148px;
+    @include respond-to-min(640px) {
+      padding-bottom: 0;
+    }
   }
 }

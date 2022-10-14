@@ -20,7 +20,6 @@ const CartCard = ({
 
     const el = document.getElementsByClassName("new");
     Object.keys(el).forEach((item, index) => {
-      console.log(`new + ${index}`, el[index]);
       el[index].focus();
       el[index].blur();
     });
@@ -31,7 +30,6 @@ const CartCard = ({
 
     const el = document.getElementsByClassName("new");
     Object.keys(el).forEach((item, index) => {
-      console.log(`new + ${index}`, el[index]);
       el[index].focus();
       el[index].blur();
     });
@@ -39,7 +37,7 @@ const CartCard = ({
 
   return (
     <>
-      <div className="cart-card">
+      <article className="cart-card">
         <div id={id} className="cart-content-checkout">
           <img src={imageCard} alt={title} />
           <div>
@@ -81,7 +79,7 @@ const CartCard = ({
               />
             </svg>
           </div>
-          <p>{subtotal}</p>
+          <p>{parseFloat(subtotal.toFixed(2))}</p>
           <div className="delete-button" onClick={remove}>
             <svg
               width="14"
@@ -97,7 +95,7 @@ const CartCard = ({
             </svg>
           </div>
         </div>
-      </div>
+      </article>
     </>
   );
 };

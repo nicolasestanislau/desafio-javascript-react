@@ -1,10 +1,16 @@
 .header-container {
-  background: #2F2E41;
+  background: #2f2e41;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 355px;
+  width: auto;
+  padding: 0 16px;
   padding-bottom: 52px;
+}
+@media only screen and (min-width: 640px) {
+  .header-container {
+    padding: 0 164px;
+  }
 }
 .header-container h1 {
   color: #fff;

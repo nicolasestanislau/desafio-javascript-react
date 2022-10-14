@@ -12,7 +12,7 @@ const HeaderBar = () => {
     <>
       <header className="header-container">
         <Link to="/">
-          <h1>WeMovies</h1>
+          <h1>Movies</h1>
         </Link>
 
         <Link to="/carrinho">
