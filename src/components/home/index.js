@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../Card";
-import "./style.scss";
+import "./style.min.css";
 import api from "../../services/api";
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div className="home-container">
       {loading === false ? (
-        movies?.map((movie) => (
+        movies.map((movie) => (
           <Card
             key={movie.id}
             id={movie.id}
