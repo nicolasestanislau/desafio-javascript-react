@@ -4,7 +4,6 @@ import { useCart } from "../CartContext";
 import CartIcon from "../Icons/CartIcon";
 const Card = ({ id, image, title, price }) => {
   const cartList = useCart();
-  const itemsCount = Object.keys(cartList.cart).length;
   const add = (product) => () => {
     cartList.addToCart(product);
   };
