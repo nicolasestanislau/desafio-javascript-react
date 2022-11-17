@@ -19,7 +19,6 @@ const Card = ({ id, image, title, price }) => {
         className="button-container"
       >
         <CartIcon />
-        <p>{itemsCount}</p>
         <p>ADICIONAR AO CARRINHO</p>
       </button>
     </div>
