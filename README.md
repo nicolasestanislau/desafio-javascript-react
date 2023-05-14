@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# To run server.json use : json-server --watch server.json --port 3001
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
