@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Viúva Negra",
-      "price": 9.99,
+      "price": 69.99,
       "image": "https://www.imagemhost.com.br/images/2022/07/10/viuva-negra.png"
     },
     {
@@ -21,32 +21,32 @@
     {
       "id": 5,
       "title": "Morbius",
-      "price": 1.59,
-      "image": "https://www.imagemhost.com.br/images/2022/07/10/morbius-1.png"
+      "price": 41.59,
+      "image": "https://i.ibb.co/FbqjRzC/morbius-1.png"
     },
     {
       "id": 6,
       "title": "Batman",
       "price": 21.99,
-      "image": "https://www.imagemhost.com.br/images/2022/07/10/the-batman.png"
+      "image": "https://i.ibb.co/jDzt2vK/download.jpg"
     },
     {
       "id": 4,
       "title": "Eternos",
-      "price": 17.99,
-      "image": "https://www.imagemhost.com.br/images/2022/07/10/eternals.png"
+      "price": 47.9,
+      "image": "https://i.ibb.co/Y84T6TC/download-1.jpg"
     },
     {
       "id": 7,
       "title": "Fantasia",
-      "price": 15.99,
-      "image": "https://www.imagemhost.com.br/images/2022/10/22/fantasia.png"
+      "price": 55.99,
+      "image": "https://i.ibb.co/93ffrtV/download-2.jpg"
     },
     {
       "id": 8,
       "title": "Os Simpsons",
-      "price": 27.99,
-      "image": "https://www.imagemhost.com.br/images/2022/10/22/os-simpsons-o-filme.png"
+      "price": 37.99,
+      "image": "https://i.ibb.co/NtyNBNF/download-3.jpg"
     }
   ]
 }
