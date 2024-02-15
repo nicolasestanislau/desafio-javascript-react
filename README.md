@@ -1,4 +1,4 @@
-# To run server.json use : json-server --watch server.json --port 3001
+# To run server.json use : npx json-server --watch server.json --port 3001
 
 ## Getting Started with Create React App
 
